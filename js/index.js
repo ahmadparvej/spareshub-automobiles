@@ -24,3 +24,9 @@ productData.map(function(elem,index,arr){
 
 
 // *********PRODUCT CODE:BY PARVEJ***********END*****//
+
+console.log("start coding now!")
+console.log("Rise up");
+
+console.log('Another Conole from harsh');
+
