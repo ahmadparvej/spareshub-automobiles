@@ -1,136 +1,135 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 
 /************LINKED TO INDEX.HTML *********/
 
- /* *********PRODUCT CODE:BY PARVEJ***********START***** */
+/* *********PRODUCT CODE:BY PARVEJ***********START***** */
 
- body{
-     width: 100%;
-     margin: 0;
-     padding: 0;
-     scroll-behavior: smooth;
- }
- #products{
-     display: grid;
-     grid-template-columns: repeat(5,1fr);
-     grid-template-rows: repeat(auto,1fr);
-     gap: 25px;
-     /* padding: 20px; */
-     font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
- }
- #products-section{
-   padding: 20px;
-   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
- }
- #products .product-div .imgDiv{
-    display: block;
-    position: relative;
-    overflow: hidden;
-    padding: 3px;
-    border: 1px solid #ddd;
-    border-radius: 7px;
-    }
-#products .product-image{
-        width: 100%;
-        display: flex;
-    }
- #products .product-div .product-title{
-    color: #585858;
-    font-size: 16px !important;
-    font-weight: 800 !important;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    text-align: center;
-    height: 50px;
- }
- #products .product-div .product-price{
-    font-size: 20px;
-    color: #444;
-    font-weight: 600;
-    text-align: center;
- }
- #products .product-div .cartBtn,a{
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    white-space: nowrap;
-    line-height: 30px;
-    padding: 5px 8px 0 8px;
-    border-radius: 5px;
-    font-weight: 400;
-    text-decoration: none;
- }
- #products .product-div a{
-    background-color: #fff;
-    border: 1px solid #ccc;
-   }
-   #products .product-div .cartDiv{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: center;
-      position: relative;
-   }
-   #products .product-div:hover .cartDiv>.cartBtn{
-      background: #08c;
-      border: 1px solid #08c;
-      color: white;
-   }
-   #products .product-div .cartDiv .fa-heart{
-      color: red;
-      font-size: 25px;
-      margin-right: 10px;
-      border-color: red;
-      position: absolute;
-      z-index: 1;
-      display: none;
-   }
-   #products .product-div .cartDiv .fa-signal{
-      border-color: #52b9b5;
-      font-size: 20px;
-      color: #52b9b5;
-      margin-left: 10px;
-      position: absolute;
-      z-index: 2;
-      display: none;
-   }
-   #products .product-div:hover .cartDiv> .fa-signal{
-      position: unset;
-      z-index:unset;
-      display: inline-block;
-   }
-   #products .product-div:hover .cartDiv> .fa-heart{
-      position: unset;
-      z-index:unset;
-      display: inline-block;
-   }
- #products .product-div .ratingDiv{
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
- }
- 
- #products .product-div .ratingDiv .line{
-    width: 20%;
-    height: 1px;
-    background: #c3c5c9;
- }
- #products .product-div .ratingDiv .rating{
-      color: #c3c5c9;
- }
- @media screen and (max-width: 820px){
-   #products{
-      grid-template-columns: repeat(4,1fr);
-      grid-template-rows: repeat(auto,auto);
+body {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+#products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 25px;
+  /* padding: 20px; */
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#products-section {
+  padding: 20px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#products .product-div .imgDiv {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+#products .product-image {
+  width: 100%;
+  display: flex;
+}
+#products .product-div .product-title {
+  color: #585858;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+  height: 50px;
+}
+#products .product-div .product-price {
+  font-size: 20px;
+  color: #444;
+  font-weight: 600;
+  text-align: center;
+}
+#products .product-div .cartBtn,
+a {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  line-height: 30px;
+  padding: 5px 8px 0 8px;
+  border-radius: 5px;
+  font-weight: 400;
+  text-decoration: none;
+}
+#products .product-div a {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+#products .product-div .cartDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+#products .product-div:hover .cartDiv > .cartBtn {
+  background: #08c;
+  border: 1px solid #08c;
+  color: white;
+}
+#products .product-div .cartDiv .fa-heart {
+  color: red;
+  font-size: 25px;
+  margin-right: 10px;
+  border-color: red;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+#products .product-div .cartDiv .fa-signal {
+  border-color: #52b9b5;
+  font-size: 20px;
+  color: #52b9b5;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+#products .product-div:hover .cartDiv > .fa-signal {
+  position: unset;
+  z-index: unset;
+  display: inline-block;
+}
+#products .product-div:hover .cartDiv > .fa-heart {
+  position: unset;
+  z-index: unset;
+  display: inline-block;
+}
+#products .product-div .ratingDiv {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#products .product-div .ratingDiv .line {
+  width: 20%;
+  height: 1px;
+  background: #c3c5c9;
+}
+#products .product-div .ratingDiv .rating {
+  color: #c3c5c9;
+}
+@media screen and (max-width: 820px) {
+  #products {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, auto);
   }
- }
- @media screen and (max-width: 620px){
-   #products{
-      grid-template-columns: repeat(3,1fr);
-      grid-template-rows: repeat(auto,auto);
+}
+@media screen and (max-width: 620px) {
+  #products {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, auto);
   }
- }
- /* *********PRODUCT CODE:BY PARVEJ***********END***** */
+}
+/* *********PRODUCT CODE:BY PARVEJ***********END***** */
