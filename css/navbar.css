@@ -1,0 +1,83 @@
+/*  Styling for the  header  */
+
+.colors {
+  margin: 20px auto;
+  width: 100%;
+  height: 30px;
+  background-color: hsl(177, 72%, 56%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 20px;
+}
+
+.colors2 {
+  margin: 20px auto;
+  width: 100%;
+  height: 60px;
+  background-color: hsl(177, 72%, 56%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 20px;
+}
+
+header {
+  margin: 10px auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Search Input */
+.search-input {
+  width: 800px;
+  height: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-input ion-icon {
+  font-size: 35px;
+  color: rgb(36, 108, 241);
+}
+.search-input input {
+  margin-left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+/*    Contact Detailes    */
+.search-input + div {
+  width: 900px;
+
+  height: 70px;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-input + div span {
+  font-size: 16px;
+  color: rgb(36, 108, 241);
+  text-align: start;
+}
+
+/* Coding for icons */
+
+ion-icon[name='bag-outline'] {
+  font-size: 150px;
+  color: rgb(25, 108, 216);
+}
+
+ion-icon[name='search-circle-oultine'] {
+  font-size: 50px;
+}
