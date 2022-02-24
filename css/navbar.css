@@ -1,11 +1,12 @@
 /*  Styling for the  header  */
 
+
 .colors {
-  margin: 10px auto;
-  width: 100%;
+  margin: 0px auto;
+  /* width: 100%; */
   height: 30px;
   background-color: hsl(177, 72%, 56%);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   gap: 30px;
   align-items: center;
@@ -15,11 +16,11 @@
 }
 
 .colors2 {
-  margin: 20px auto 0px;
-  width: 100%;
+  margin: 10px auto 0px;
+  /* width: 100%; */
   height: 60px;
   background-color: hsl(177, 72%, 56%);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   gap: 30px;
   align-items: center;
@@ -95,11 +96,11 @@ header {
 }
 /* Coding for icons */
 
-ion-icon[name='bag-outline'] {
+ion-icon[name="bag-outline"] {
   font-size: 150px;
   color: rgb(25, 108, 216);
 }
 
-ion-icon[name='search-circle-oultine'] {
+ion-icon[name="search-circle-oultine"] {
   font-size: 50px;
 }
