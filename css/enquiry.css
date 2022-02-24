@@ -1,0 +1,110 @@
+#form-div{
+    width: 500px;
+    height: 85px;
+    border-radius: 5px;
+    background: rgb(139,166,57);
+    position: fixed;
+    bottom: 0px;
+    left: 68px;
+}
+@keyframes hideEnquiryForm{
+    from{
+        bottom : 0px;
+        }
+
+        to{
+        bottom : -100px;
+        }
+}
+@keyframes showEnquiryForm{
+    from{
+        bottom : -100px;
+        }
+
+        to{
+        bottom : 0px;
+        }
+}
+#form-div > p{
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+#form-div > form{
+    width: 90%;
+    margin: auto;
+}
+#enquiryInput{
+    width: 300px;
+    height: 35px;
+    padding: 0px;
+    border-radius: 5px;
+    border:0px solid white;
+}
+
+#enquiryInput:focus{
+    outline-width: 0px;
+}
+
+form > button{
+    margin-left: 20px;
+    padding: 10px;
+    width: 80px;
+    background: teal;
+    color: white;
+    border: 1px solid teal;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+}
+span{
+    position: absolute;
+    top: -15px;
+    right: -12px;
+    background: #4faede;
+    padding: 4px 10px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    }
+
+    .callbtn{
+       position: fixed;
+       left: 20px;
+       bottom: 0px; 
+       cursor: pointer;
+    }
+
+    .callbtn > img{
+        width: 48px;
+        height: 48px;
+    }
+
+    @keyframes showCallBtn{
+        from{
+            bottom: -49px;
+            border-radius: 50px 50px 0px 0px;
+        }
+
+        to{
+            bottom: 0px;
+        }
+    }
+
+ @keyframes hideCallBtn{
+        0%{
+            bottom: 0px;
+            /*border-radius: 50px 50px 0px 0px;*/
+        }
+        50%{
+            border-radius: 50px 50px 0px 0px;
+        }
+        100%{
+            bottom: -49px;
+   
+        }
+    }
