@@ -1,0 +1,57 @@
+#slider{
+    margin: auto;
+    width: 98%;
+    overflow: hidden;
+}
+
+.slide{
+    width: 20%;
+    float: left;		
+}
+.slide>img{
+    width: 100%;
+    float: left;
+}
+#inner-box {
+    width: 500%;
+    position: relative;
+    animation-name: ajit;
+    animation-duration: 25s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes ajit{
+    0%{
+        left: 0%;
+    }
+    16%{
+        left: 0%;
+    }
+    17%{
+        left: -100%;
+    }
+    36%{
+        left: -100%;
+    }
+    37%{
+        left: -200%;
+    }
+    56%{
+        left: -200%;
+    }
+    57%{
+        left: -300%;
+    }
+    76%{
+        left: -300%;
+    }
+    77%{
+        left: -400%;
+    }
+    96%{
+        left: -400%;
+    }
+    97%{
+        left: -500%;
+    }
+}
