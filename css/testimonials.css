@@ -1,0 +1,34 @@
+#testimonial-section {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  color: #777777;
+  font: 13px;
+  margin-left: 20px;
+  background-color: #f9f9f9;
+}
+
+#comment-box {
+  display: flex;
+  height: 60%;
+  width: 40%;
+  margin-top: 35px;
+  gap: 25px;
+}
+.other-desc {
+  margin-top: 10px;
+  color: #585858;
+  font: 14px 'Open Sans';
+  font-weight: 400;
+}
+.other-name {
+  color: #585858;
+  font: 18px 'Open Sans';
+  font-weight: bolder;
+}
+h2 {
+  color: #585858;
+  font: 24px 'Open Sans';
+  font-weight: bolder;
+  font-style: inherit;
+}
