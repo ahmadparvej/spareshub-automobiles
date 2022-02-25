@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-
 /************LINKED TO INDEX.HTML *********/
-
  /* *********PRODUCT CODE:BY PARVEJ***********START***** */
-
  body{
      width: 100%;
      margin: 0;
@@ -131,5 +127,151 @@
       grid-template-columns: repeat(3,1fr);
       grid-template-rows: repeat(auto,auto);
   }
+ }
+
+ /* *****showProduct**** */
+ #show-Item{
+    display: flex;
+    gap: 30px;
+ }
+ #show-Item .show-item-image-div{
+    border: 1px solid #585858;
+    padding: 40px;
+    border-radius: 5px;
+    width: 20%;
+ }
+ #show-Item .show-item-image{
+    width: 100%;
+    display: flex;
+ }
+ #show-Item .show-item-productDetail-div{
+    /* border: 1px solid #585858; */
+ }
+ #show-Item .show-item-title{
+    font-size: 30px;
+    color: #08c;
+    font-weight: bold;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;;
+ }
+ #show-Item .show-item-price, .show-item-price{
+    font-size: 30px;
+    color: #08c;
+    font-weight: bold;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;;
+ }
+ #show-Item .show-item-rating{
+    color: #444;
+ }
+ #show-Item .show-item-addToCart{
+    display:inline-block;
+    font-size: 18px;
+    background: #08c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+ }
+ #show-Item .show-item-priceQty-div{
+    border: 1px solid black;
+    display: flex;
+ }
+ #show-Item .show-item-qty{
+    width: 40px;
+    height: 35px;
+    margin: 0 20px 0 0;
+    border:2px solid #08c;
+    border-radius: 4px;
+ }
+
+ /* CART CODE */
+ #main-container {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: -1;
+ }
+
+ #cart {
+   position: absolute;
+   right: 20px;
+   top: 100px;
+   z-index: 99999;
+   background: white;
+   box-sizing: border-box;
+   overflow-y: scroll;
+   display: none;
+   padding: 25px 18px;
+   width: 350px;
+   height: 400px;
+   right: -15px;
+   border-top: 6px solid #08c;
+   color: #777;
+   border-radius: 8px;
+   box-shadow: 0 0 5px rgb(0 0 0 / 25%);
+ }
+
+ #cart .cart-item-image-div {
+   margin-right: 10px;
+ }
+
+ #cart .cart-item {
+   display: flex;
+   /* border: 1px solid #08c; */
+   padding: 5px;
+   border-radius: 4px;
+ }
+
+ #cart .cart-item-image {
+   width: 100px;
+   height: 100px;
+ }
+
+ #cart .cart-item-title {
+   font-size: 15px;
+   color: #08c;
+   padding: 0;
+   margin: 0;
+ }
+
+ #cart .cart-item-price {
+   margin: 5px 0;
+ }
+
+ #cart .cart-item-qty {
+   width: 20px;
+   height: 20px;
+ }
+ #cart #cart-checkOut{
+ background-image: none;
+ background: #08c;
+ border: 1px solid #08c;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+ font-weight: 600;
+ padding: 7px 15px;
+ font-size: 1.2rem;
+ box-sizing: border-box;
+ vertical-align: middle;
+ font-weight: 400;
+ line-height: 22px;
+ border-radius: 4px;
+ }
+ #cart #cart-totalPrice{
+   font-size: 25px;
+   color: #08c;
+ }
+ .fa-bag-shopping{
+   font-size: 60px;
+   color: #08c;
+   position: relative;
+ }
+ #mycart-count{
+   font-size: 15px;
+   position: absolute;
+   font-weight: bold;
+   color: #08c;
+   z-index: 9999;
  }
  /* *********PRODUCT CODE:BY PARVEJ***********END***** */
