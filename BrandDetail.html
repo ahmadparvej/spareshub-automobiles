@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Styling for the BrandDetail Page -->
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      h1 {
+        width: 70%;
+        text-transform: capitalize;
+        font-size: 35px;
+        margin: 20px auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .grid {
+        width: 70%;
+        margin: 70px auto;
+        /* background-color: chocolate; */
+        /* color: #fff; */
+        display: grid;
+        gap: 15px 15px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+      }
+
+      .grid > div {
+        box-sizing: border-box;
+        /* padding: 10px; */
+        /* border: 1px solid black; */
+        border: 1px solid #777;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .grid > div > img {
+        
+        width: 100px;
+        height: 100px;
+      }
+
+      .price-con {
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Brands Page</h1>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+  <script src="./js/brands.js"></script>
+</html>

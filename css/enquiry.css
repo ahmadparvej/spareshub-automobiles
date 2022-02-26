@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
 #form-div{
     width: 500px;
     height: 85px;
@@ -60,12 +64,12 @@ form > button{
     font-weight: 400;
     font-size: 16px;
 }
-span{
+#form-div span{
     position: absolute;
     top: -15px;
     right: -12px;
     background: #4faede;
-    padding: 4px 10px;
+    padding: 5px 14px 8px 14px;
     border-radius: 50%;
     color: #fff;
     cursor: pointer;

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Customer Login</h1>
+      <div id="inner-container">
+        <div id="signup">
+          <div id="personalInfo">
+            <h2>Registered Customers</h2>
+            <p>If you have an account, sign in with your email address.</p>
+            <form>
+              <label for="email">Email</label>
+              <input type="email" id="email" /><br />
+              <label for="password">Password</label>
+              <input type="password" id="password" /><br />
+              <button id="submit_btn" style="margin-bottom: 2%">Sign In</button>
+              <a href="#">Forgot Your Password?</a>
+            </form>
+            <p style="color: tomato; font-size: 14px">* Required Fields</p>
+          </div>
+          <div id="signInInfo">
+            <h2>New Customers</h2>
+            <p>
+              Creating an account has many benefits: check out faster, keep more
+              than one address, track orders and more.
+            </p>
+            <button id="submit_btn" onclick="window.location.href='signup.html'">Create an Account</button>
+
+            <div id="social-btn">
+              <div>
+                <i class="fa-brands fa-facebook-square"></i>
+                <a id="fb-btn" href="#">Sign in with Facebook</a>
+              </div>
+              <div>
+                <i class="fa-brands fa-google"></i>
+                <a id="goggle-btn" href="#">Sign in with Google</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <button id="submit_btn">Create an Account</button> -->
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit",function(event){
+    event.preventDefault();
+    var current_email=(document.querySelector("#email").value)
+    var current_password=(document.querySelector("#password").value)
+    var signupDetails=JSON.parse(localStorage.getItem("signupDetails"))
+    signupDetails.map(function(el,index,arr){
+      if(el.email==current_email){
+      if(current_email==el.email && current_password==el.pswd){
+        window.location.href='index.html'
+        localStorage.setItem("name",JSON.stringify(el.firstName))
+        return ;
+      }else{
+        alert("Wrong Details--please fill correct details")
+        return ;
+      }
+      }
+    })
+
+      })
+</script>

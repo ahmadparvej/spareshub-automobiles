@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+  #outer-box {
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+
+  #inner-box {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkout-form {
+    width: 60%;
+    height: 80%;
+    /* border: 1px solid red; */
+  }
+  /*form code start Here*/
+  form > input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  #state,
+  #country {
+    padding: 10px;
+    width: 63%;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  form > label {
+    display: block;
+    color: gray;
+    padding: 10px 10px 10px 0px;
+  }
+  form > label::after {
+    content: " *";
+    color: red;
+  }
+  /*form code ends Here*/
+
+  .order-summary {
+    width: 35%;
+    height: 40%;
+    border: 1px solid gray;
+    background: rgb(206, 203, 203);
+  }
+  .order-summary > h1,
+  #outer-box > h1 {
+    font-weight: 400;
+    color: gray;
+  }
+  .wrap-order {
+    width: 80%;
+    margin: auto;
+  }
+
+  #checkout-items {
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+
+  #submit_btn {
+    padding: 10px 17px;
+    font-size: 14px;
+    color: white;
+    background: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+  }

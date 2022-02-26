@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Create New Customer Account</h1>
+      <div id="social-btn">
+        <div>
+          <i class="fa-brands fa-facebook-square"></i>
+          <a id="fb-btn" href="#">Sign in with Facebook</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-google"></i>
+          <a id="goggle-btn" href="#">Sign in with Google</a>
+        </div>
+      </div>
+      <div id="inner-container">
+        <div id="signup">
+          <div id="personalInfo">
+            <form>
+              <fieldset>
+                <legend>PERSONAL INFORMATION</legend>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" /><br />
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" /><br />
+                <div id="check">
+                  <input type="checkbox" value="yes" />
+                  <label>Sign Up for Newsletter</label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div id="signInInfo">
+            <form>
+              <fieldset>
+                <legend>SIGN-IN INFORMATION</legend>
+                <label for="email">Email</label>
+                <input type="email" id="email" /><br />
+                <label for="pswd">Password</label>
+                <input type="password" id="pswd" /><br />
+                <label for="cnfmpswd">Confirm Password</label>
+                <input type="password" id="cnfmpswd" /><br />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <button id="submit_btn">Create an Account</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var signupDetails=JSON.parse(localStorage.getItem("signupDetails")) || []
+  document.querySelector("#submit_btn").addEventListener("click",function(){
+    var signupDetails=JSON.parse(localStorage.getItem("signupDetails"))
+    event.preventDefault()
+    var firstName=document.querySelector("#firstName").value
+    var lastName=document.querySelector("#lastName").value
+    var email=document.querySelector("#email").value
+    var pswd=document.querySelector("#pswd").value
+    var obj={
+      firstName:firstName,
+      lastName:lastName,
+      email:email,
+      pswd:pswd,
+    }
+    signupDetails.push(obj);
+    localStorage.setItem("signupDetails",JSON.stringify(signupDetails));
+
+    window.location.href='login.html'
+  })
+</script>
