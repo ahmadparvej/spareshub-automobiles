@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/checkout.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="outer-box">
+      <h1 style="margin-bottom: 5px">Shipping Address</h1>
+      <div id="inner-box">
+        <div class="checkout-form">
+          <hr />
+          <form enctype="multipart/form-data">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" /><br />
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" /><br />
+            <label for="company">Company</label>
+            <input type="text" id="company" />
+            <label for="address">Street Address</label>
+            <input type="text" id="address" /><br />
+            <label for="city">City</label>
+            <input type="text" id="city" /><br />
+            <label for="state">State/Province</label>
+            <select id="state">
+              <option value="#" selected>
+                Please select a region, state or province.
+              </option>
+              <option value="Delhi">Delhi</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+            <label for="zipcode">Zip/Postal Code</label>
+            <input type="text" id="zipcode" /><br />
+            <label for="country">Country</label>
+            <select id="country">
+              <option value="India" selected>India</option>
+              <option value="China">China</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+            </select>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" /><br />
+          </form>
+          <div style="text-align: right">
+            <button id="submit_btn">Next</button>
+          </div>
+          <!-- <h1 style="margin-bottom: 5px; color: gray; font-weight: lighter">
+            Shipping Methods
+          </h1>
+          <hr /> -->
+        </div>
+        <div class="order-summary">
+          <div class="wrap-order">
+            <h1 style="color: rgb(77, 73, 73); font-weight: lighter">
+              Order Summary
+            </h1>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+              "
+            >
+              <div>
+                <span
+                  style="
+                    color: rgb(77, 73, 73);
+                    font-size: 20px;
+                    font-weight: lighter;
+                  "
+                  ><span>1</span> Item in Cart</span
+                >
+              </div>
+              <div>
+                <i
+                  class="fa-solid fa-caret-down"
+                  id="showAndHideCheckoutItems"
+                  style="color: rgb(88, 85, 85);"
+                ></i>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div id="checkout-items" aria-hidden="true">
+            <div>
+              <img
+                src="https://spareshub.com/pub/media/catalog/product/placeholder/default/no_image_3.png"
+                width="70"
+                height="70"
+              />
+            </div>
+            <div style="font-size: 14px; margin-left: 10px; margin-top: 0px">
+              <p>WIRE ROLL 2.50 SQ. MM - GREEN COLOUR</p>
+              <p>Qty:<span>1</span></p>
+            </div>
+            <div>
+              <p>&#8377;723.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document
+    .querySelector("#showAndHideCheckoutItems")
+    .addEventListener("click", function () {
+      var res = document
+        .querySelector("#checkout-items")
+        .getAttribute("aria-hidden");
+      if (res == "true") {
+        document.querySelector("#checkout-items").style.display = "flex";
+        document
+          .querySelector("#checkout-items")
+          .setAttribute("aria-hidden", "false");
+      } else {
+        document.querySelector("#checkout-items").style.display = "none";
+        document
+          .querySelector("#checkout-items")
+          .setAttribute("aria-hidden", "true");
+      }
+    });
+
+    document.querySelector("#submit_btn").addEventListener("click",function(){
+      window.location.href="payments.html"
+    })
+</script>

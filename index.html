@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>spareshub</title>
   <script src="https://kit.fontawesome.com/4d94468d16.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./css/style.css">
@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="./css/footer.css">
 
 </head>
-<!--  -->
 
 <body>
   <div id="cart">
@@ -27,12 +26,12 @@
   </div>
 
   <div class="colors">
-    <p>
-      WELCOME AT SPARESHUB.COM
+    <p id="userName">
+
     </p>
     <a href="#">CONTACT US</a>
-    <a href="#">SIGN IN</a>
-    <a href="#">CREATE AN ACCOUNT</a>
+    <a href="login.html">SIGN IN</a>
+    <a href="signup.html">CREATE AN ACCOUNT</a>
   </div>
   <header>
     <div>
@@ -58,11 +57,40 @@
   </header>
 
   <div class="colors2">
-    <div>BRANDS</div>
-    <div>CATEGORIES</div>
-    <div>MANUFACTURERS</div>
-    <div>FRANCHISE</div>
-    <div>CAREERS</div>
+    <div class="colors2">
+      <div id="brands1">
+        BRANDS <i class="arrow down"></i>
+        <ul>
+          <li onclick="brandChecker(0),window.location.href='BrandDetail.html'">Maruti</li>
+          <li onclick="brandChecker(1),window.location.href='BrandDetail.html'">Hundai</li>
+          <li onclick="brandChecker(2),window.location.href='BrandDetail.html'">Mahindra</li>
+          <li>Volkswagen</li>
+          <li>Skoda</li>
+          <li>Ford</li>
+        </ul>
+      </div>
+
+      <div id="categories1">
+        CATEGORIES <i class="arrow down"></i>
+        <ul>
+          <li>Bushes</li>
+          <li>Belts</li>
+          <li>BodyParts</li>
+          <li>Breaking System</li>
+          <li>Clutch System</li>
+          <li>Electricals</li>
+          <li>Engine Parts</li>
+          <li>Filters</li>
+          <li>Lighting System</li>
+          <li>Heat and Cooling</li>
+        </ul>
+      </div>
+
+      <div>MANUFACTURERS <i class="arrow down"></i></div>
+    </div>
+
+    <div onclick="window.location.href='franchise.html'" style="cursor:pointer;">FRANCHISE</div>
+    <div onclick="window.location.href='careers.html'" style="cursor:pointer;">CAREERS</div>
   </div>
 
 
@@ -112,13 +140,13 @@
     <div id="container">
       <h2 style="height: 34px;"><strong>BROWSE BY BRANDS</strong></h2>
       <div id="row">
-        <div><a href="https://spareshub.com/maruti-suzuki/"> <img class="brandimglogo"
+        <div><a href="/BrandDetail.html" onclick="brandChecker(0)"> <img class="brandimglogo"
               src="https://spareshub.com/pub/media/wysiwyg/xmarutisuzuki_1.png.pagespeed.ic.9zcpkCRaUE.webp"> </a></div>
 
-        <div><a href="https://spareshub.com/hundai/"> <img class="brandimglogo"
+        <div><a href="/BrandDetail.html" onclick="brandChecker(1)"> <img class="brandimglogo"
               src="https://spareshub.com/pub/media/wysiwyg/xhundai_1.png.pagespeed.ic.BdhzVhklJm.webp"> </a></div>
 
-        <div><a href="https://spareshub.com/mahindra/"> <img class="brandimglogo"
+        <div><a href="/BrandDetail.html" onclick="brandChecker(2)"> <img class="brandimglogo"
               src="https://spareshub.com/pub/media/wysiwyg/xmahindra_1.png.pagespeed.ic.H0Q9fj69-h.webp"> </a></div>
 
         <div><a href="https://spareshub.com/tata/"> <img class="brandimglogo"
@@ -225,6 +253,7 @@
 
 
   <footer id="footer">
+    <div class="footer-ribbon">Spareshub</div>
     <div class="mainBox">
       <div class="box1">
         <div>
@@ -236,7 +265,7 @@
           <p>Email us - care@spareshub.com</p>
         </div>
         <div>
-          <p>Franchise</p>
+          <p onclick="window.location.href='franchise.html'">Franchise</p>
           <p>Feedback</p>
           <p>Disclaimer</p>
           <p>Legal</p>
@@ -280,3 +309,14 @@
 <script src="./js/index.js"></script>
 <script src="./js/productData.js"></script>
 <script src="./js/enquiry.js"></script>
+
+
+<script>
+  var name = JSON.parse(localStorage.getItem("name"))
+  console.log(typeof (name))
+  if (name === 'null') {
+    document.querySelector("#userName").innerText = "Welcome at spareshub"
+  } else {
+    document.querySelector("#userName").innerText = "Welcome " + name
+  }
+</script>

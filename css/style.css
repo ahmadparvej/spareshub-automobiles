@@ -22,11 +22,14 @@ body {
 }
 #products .product-div .imgDiv {
   display: block;
+  width: 200px;
+  height: 200px;
   position: relative;
   overflow: hidden;
   padding: 3px;
   border: 1px solid #ddd;
   border-radius: 7px;
+  margin: auto;
 }
 #products .product-image {
   width: 100%;
@@ -130,59 +133,59 @@ body {
     grid-template-rows: repeat(auto, auto);
   }
 
- } */
-
- /* *****showProduct**** */
- #show-Item{
-    display: flex;
-    gap: 30px;
- }
- #show-Item .show-item-image-div{
-    border: 1px solid #585858;
-    padding: 40px;
-    border-radius: 5px;
-    width: 20%;
- }
- #show-Item .show-item-image{
-    width: 100%;
-    display: flex;
- }
- #show-Item .show-item-title{
-    font-size: 30px;
-    color: #08c;
-    font-weight: bold;
-    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;;
- }
- #show-Item .show-item-price{
-    font-size: 30px;
-    color: #08c;
-    font-weight: bold;
-    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;;
- }
- #show-Item .show-item-rating{
-    color: #444;
- }
- #show-Item .show-item-addToCart{
-    display:inline-block;
-    font-size: 18px;
-    background: #08c;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
- }
- #show-Item .show-item-priceQty-div{
-    border: 1px solid black;
-    display: flex;
- }
- #show-Item .show-item-qty{
-    width: 40px;
-    height: 35px;
-    margin: 0 20px 0 0;
-    border:2px solid #08c;
-    border-radius: 4px;
  }
 
+#show-Item{
+  display: flex;
+  gap: 30px;
+}
+#show-Item .show-item-image-div{
+  border: 1px solid #585858;
+  padding: 40px;
+  border-radius: 5px;
+  width: 20%;
+}
+#show-Item .show-item-image{
+  width: 100%;
+  display: flex;
+}
+#show-Item .show-item-title{
+  font-size: 30px;
+  color: #08c;
+  font-weight: bold;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;;
+}
+#show-Item .show-item-price{
+  font-size: 30px;
+  color: #08c;
+  font-weight: bold;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;;
+}
+#show-Item .show-item-rating{
+  color: #444;
+}
+#show-Item .show-item-addToCart{
+  display:inline-block;
+  font-size: 18px;
+  background: #08c;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+#show-Item .show-item-priceQty-div{
+  border: 1px solid black;
+  display: flex;
+}
+#show-Item .show-item-qty{
+  width: 40px;
+  height: 35px;
+  margin: 0 20px 0 0;
+  border:2px solid #08c;
+  border-radius: 4px;
+}
+
+ 
  /* CART CODE */
  /* #main-container {
    position: absolute;
@@ -211,18 +214,20 @@ body {
 
  #cart .cart-item-image-div {
    margin-right: 10px;
+   width: 50px;
+   height: 50px;
  }
 
  #cart .cart-item {
    display: flex;
-   /* border: 1px solid #08c; */
+   /* border: 1px solid #777; */
    padding: 5px;
    border-radius: 4px;
  }
 
  #cart .cart-item-image {
-   width: 100px;
-   height: 100px;
+   width: 50px;
+   height: 50px;
  }
 
  #cart .cart-item-title {
@@ -319,4 +324,46 @@ body {
  }
  
  /* *********PRODUCT CODE:BY PARVEJ***********END***** */
+
+
+ /* *********PRODUCT CODE:BY HARSH***********START***** */
+
+
+ .colors2 #brands1 > ul {
+  display: none;
+}
+
+.colors2 #brands1:hover > ul {
+  background-color: #08c;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px 10px;
+  gap: 10px 20px;
+  z-index: 30;
+  list-style-type: none;
+  position: absolute;
+  color: white;
+  cursor: pointer;
+}
+.colors2 #categories1 > ul {
+  display: none;
+  
+}
+.colors2 #categories1:hover > ul {
+  list-style-type: none;
+  background-color: #08c;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 20px 10px;
+  gap: 10px 20px;
+  z-index: 30;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+}
+
 

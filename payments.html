@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      #outer-box {
+        width: 80%;
+        margin: auto;
+        /* border: 1px solid black; */
+      }
+
+      #inner-box {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .payment-options {
+        width: 60%;
+        height: 80%;
+      }
+      .payment-options > div {
+        margin: 20px 0;
+      }
+      .order-summary {
+        width: 35%;
+        height: 40%;
+        border: 1px solid gray;
+        background: rgb(245, 245, 245);
+      }
+      .order-summary > h1,
+      #outer-box > h2 {
+        font-weight: lighter;
+        color: gray;
+      }
+      .wrap-order {
+        width: 80%;
+        margin: auto;
+      }
+
+      #checkout-items {
+        width: 90%;
+        height: 150px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        display: none;
+      }
+
+      #customer-details {
+        width: 40%;
+      }
+
+      #customer-details > form > input {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      #customer-details > form > label {
+        display: block;
+        color: gray;
+        padding: 10px 10px 10px 0px;
+      }
+
+      #submit_btn {
+        padding: 10px 17px;
+        font-size: 14px;
+        color: white;
+        background: dodgerblue;
+        border: 1px solid dodgerblue;
+        border-radius: 5px;
+        margin: 2% 0;
+        cursor: pointer;
+      }
+
+      #address-area {
+        margin: 20px 0 0 auto;
+        width: 35%;
+        height: 400px;
+      }
+
+      #cart-total-area > div {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer-box">
+      <h2 style="margin-bottom: 5px">Payment Method</h2>
+      <div id="inner-box">
+        <div class="payment-options">
+          <hr style="border: 2px solid gray" />
+          <div>
+            <input
+              type="radio"
+              id="card-option"
+              name="payment-mode"
+              value="card"
+            />
+            <img
+              src="https://spareshub.com/pub/static/version1644659243/frontend/Smartwave/porto/en_US/PayU_PaymentGateway/images/payu_cards.png"
+              alt="payu_cards"
+            />
+            <span>pay with card</span>
+          </div>
+          <div id="customer-details" style="display: none">
+            <h3 style="margin-bottom: 5px">Address</h3>
+            <span>Ajit </span><span>Singh</span><br />
+            <span>vishwakarma road</span><br />
+            <span>Noida </span><span>Uttar Pradesh </span><span>201301</span>
+            <br />
+            <span>India</span><br />
+            <span>9953110699</span>
+            <h3 style="margin-bottom: 5px">Payment Details</h3>
+            <form>
+              <label>CARD NUMBER</label>
+              <input type="tel" placeholder="Card Number" /><br />
+              <label>EXPIRATION DATE</label>
+              <input type="tel" placeholder="MM/YY" /><br />
+              <label>CVV NUMBER</label>
+              <input type="tel" placeholder="CVV Number" /><br />
+              <label>OWNER NAME</label>
+              <input type="text" placeholder="Owner Name" /><br />
+              <button id="submit_btn" class="submit_btn">Place Order</button>
+            </form>
+          </div>
+          <hr />
+          <div>
+            <input
+              type="radio"
+              name="payment-mode"
+              id="cash-option"
+              value="cod"
+            />
+            <span>Cash On Delivery</span>
+          </div>
+          <div class="cash-pay" style="display: none">
+            <h3>Address</h3>
+            <span>Ajit </span><span>Singh</span><br />
+            <span>vishwakarma road</span><br />
+            <span>Noida </span><span>Uttar Pradesh </span><span>201301</span>
+            <br />
+            <span>India</span><br />
+            <span>9953110699</span>
+            <br />
+            <button id="submit_btn" class="submit_btn" onclick="window.location.href='successful.html'">Place Order</button>
+          </div>
+          <hr />
+        </div>
+        <div class="order-summary">
+          <div class="wrap-order">
+            <h1 style="color: rgb(77, 73, 73); font-weight: lighter">
+              Order Summary
+            </h1>
+            <hr />
+            <div id="cart-total-area">
+              <div>
+                <div style="font-size: 14px">cart Subtotal</div>
+                <div id="cart-total">0</div>
+              </div>
+              <div>
+                <div style="font-size: 14px">Shipping Charges</div>
+                <div>40</div>
+              </div>
+              <hr />
+              <div>
+                <div>
+                  <h2 style="color: gray">Order Total</h2>
+                </div>
+                <div><h3 id="order-total"></h3></div>
+              </div>
+              <hr />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+              "
+            >
+              <div>
+                <span
+                  style="
+                    color: rgb(77, 73, 73);
+                    font-size: 20px;
+                    font-weight: lighter;
+                  "
+                  ><span>1</span> Item in Cart</span
+                >
+              </div>
+              <div>
+                <i
+                  class="fa-solid fa-caret-down"
+                  id="showAndHideCheckoutItems"
+                  style="color: rgb(88, 85, 85)"
+                ></i>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div id="checkout-items" aria-hidden="true">
+            <div>
+              <img
+                src="https://spareshub.com/pub/media/catalog/product/placeholder/default/no_image_3.png"
+                width="70"
+                height="70"
+              />
+            </div>
+            <div style="font-size: 14px; margin-left: 10px; margin-top: 0px">
+              <p>WIRE ROLL 2.50 SQ. MM - GREEN COLOUR</p>
+              <p>Qty:<span>1</span></p>
+            </div>
+            <div>
+              <p>&#8377;723.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="address-area">
+        <h2 style="color: gray">Ship To:</h2>
+        <hr />
+        <span>Name: </span><span>Ajit </span><span>Singh</span><br />
+        <span>Street Adress: </span><span>vishwakarma road</span><br />
+        <span>Adress: </span><span>Noida </span><span>Uttar Pradesh </span
+        ><span>201301</span>
+        <br />
+        <span>Country: </span><span>India</span><br />
+        <span>Phone: </span><span>9953110699</span>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("#card-option").addEventListener("click", function () {
+    document.querySelector("#customer-details").style.display = "block";
+  });
+
+  document.querySelector("#cash-option").addEventListener("click", function () {
+    document.querySelector(".cash-pay").style.display = "block";
+  });
+
+  document
+    .querySelector("#showAndHideCheckoutItems")
+    .addEventListener("click", function () {
+      var res = document
+        .querySelector("#checkout-items")
+        .getAttribute("aria-hidden");
+      if (res == "true") {
+        document.querySelector("#checkout-items").style.display = "flex";
+        document
+          .querySelector("#checkout-items")
+          .setAttribute("aria-hidden", "false");
+      } else {
+        document.querySelector("#checkout-items").style.display = "none";
+        document
+          .querySelector("#checkout-items")
+          .setAttribute("aria-hidden", "true");
+      }
+    });
+
+  document.querySelector(".submit_btn").addEventListener("click", function () {
+    event.preventDefault();
+    window.location.href='successful.html'
+  });
+
+  var total=JSON.parse(localStorage.getItem("cartTotalPrice"))
+  document.querySelector("#cart-total").innerText=total
+  document.querySelector("#order-total").innerText=total+40
+
+</script>

@@ -71,11 +71,9 @@ productData.map(function(elem,index,arr){
     div.append(imgDiv,productDetail);
     document.querySelector("#products").append(div)
 })
-
 // *****************CART POPOU CODE: BY PARVEJ****************//
 document.querySelector("#mycart").addEventListener("click",function (){
     document.querySelector("#cart").style.display="block";
-    
     var cart=JSON.parse(localStorage.getItem("cart"))
     document.querySelector("#cartItems").innerHTML=""
     cart.map(function(elem,index,arr){
@@ -106,6 +104,7 @@ document.querySelector("#mycart").addEventListener("click",function (){
 
     var qty=document.createElement("input")
     qty.setAttribute("class","cart-item-qty")
+    
     qty.value=elem.qty;
     var Qtydiv=document.createElement("div")
     Qtydiv.setAttribute("class","cart-item-Qtydiv")
@@ -121,5 +120,17 @@ document.querySelector("#mycart").addEventListener("click",function (){
     document.querySelector("#cart-totalPrice").innerHTML="Total Price: "+sum;
     localStorage.setItem("cartTotalPrice",JSON.stringify(sum));
 })
-// *********PRODUCT CODE:BY PARVEJ***********END*****//
 
+document.querySelector("#close-cart").addEventListener("click",function (){
+    document.querySelector("#cart").style.display="none";
+})
+
+document.querySelector("#cart-checkOut").addEventListener("click",function () {
+    window.location.href="checkout.html";
+})
+// *********PRODUCT CODE:BY PARVEJ***********END*****//
+function brandChecker(index) {
+
+    var brandData = JSON.parse(localStorage.getItem('brands'))[index]
+    localStorage.setItem('brandData', JSON.stringify(brandData))
+}

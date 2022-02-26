@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers</title>
+    <style>
+      #career-container {
+        width: 98%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        color: gray;
+      }
+      #career-container h3 {
+        margin-bottom: 5px;
+      }
+      #summary,
+      #description,
+      #profile {
+        padding-left: 40px;
+      }
+      #job-description {
+        width: 100%;
+        height: 740px;
+        border: 1px solid dodgerblue;
+        border-radius: 20px;
+      }
+      #career-container > h1,
+      #career-container > h1 + p {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      #career-container > h1 {
+        font-weight: 400;
+      }
+      /* #career-container > h1+p{
+
+      } */
+      #designation {
+        background: dodgerblue;
+        border-radius: 10px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      #submit_btn {
+        padding: 10px 17px;
+        font-size: 14px;
+        color: white;
+        background: dodgerblue;
+        border: 1px solid dodgerblue;
+        margin-left: 15px;
+        border-radius: 5px;
+      }
+      /* form-styling starts here */
+      #career-area {
+        border: 1px solid gray;
+        width: 100%;
+        height: 600px;
+      }
+
+      #form-area {
+        width: 90%;
+        height: 90%;
+        margin: 45px auto;
+      }
+
+      /*form code start Here*/
+      form > input {
+        padding: 10px;
+        width: 98%;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+      #experience {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      #resume{
+        padding:0;
+        border-radius:0;
+        border:0;
+      }
+      form > label {
+        display: block;
+        color: gray;
+        padding: 10px 10px 10px 0px;
+      }
+      form > label::after {
+        content: " *";
+        color: red;
+      }
+      /*form code ends Here*/
+      /* form-styling ends here  */
+    </style>
+  </head>
+  <body>
+    <div id="career-container">
+      <h1>What's your next career move?</h1>
+      <p>
+        Join us as we continue to scale up our operations, expand our boundaries
+        and build a company with a vision to transform the domestic spare parts
+        distribution business.
+      </p>
+      <p id="designation">Full Stack Developer</p>
+      <div id="job-description">
+        <ul type="none">
+          <li>Position Name: Full-Stack Senior Software Developer</li>
+          <li>Experience: 5 to 7 years</li>
+          <li>Qualification: BE/ Post graduate in Computer Science</li>
+          <li>Location: Pune</li>
+        </ul>
+        <div id="summary">
+          <h3>Summary</h3>
+
+          <p>
+            SparesHub, an automobile parts B2B e-commerce company in Pune with
+            branch offices in Mumbai & Bangalore. We are searching for awesome
+            technology geeks and hackers for the position of Senior Software
+            Developer. The candidate would take end-to-end responsibility of the
+            company's all technology projects, and provide technology vision.
+            Our domain is unique so are our problems so it isimportant that we
+            keep researching new areas in tech. Our environment is vibrant and
+            full of energy.We are looking for like-minded people who love to -
+            code- and have passion in building great softwares. Please read the
+            job description and requirements below.
+          </p>
+          <p>
+            Candidates must be fully competent with key technical skills
+            including:
+          </p>
+          <p>
+            *Strong programming experience in PHP, MYSQL, Magento, Data
+            Analytics:
+          </p>
+        </div>
+        <div id="description">
+          <h3>Job Description</h3>
+          <ul>
+            <li>
+              Establish the company's technical vision and leads all aspects of
+              the company's technological development.
+            </li>
+            <li>
+              Participating in a team-oriented environment to develop complex
+              web-based applications and also have the capability to handle
+              multiple projects individually.
+            </li>
+            <li>
+              Take active part in all aspects of systems design, code
+              construction, database design, unit and integration testing, and
+              implementation.
+            </li>
+            <li>
+              Rapidly develop next-generation scalable, flexible, and
+              high-performance systems.
+            </li>
+            <li>Cloud server management experience for AWS, GCP</li>
+            <li>
+              Adaptable to work in frameworks such as Codeigniter, Magento.
+            </li>
+            <li>
+              Conducts research and case studies on leading-edge technologies
+              and makes determinations on the probability of implementation.
+            </li>
+            <li>
+              Maintaining existing codebase, to include troubleshooting bugs and
+              adding new features.
+            </li>
+            <li>
+              Maintaining existing codebase, to include troubleshooting bugs and
+              adding new features.
+            </li>
+            <li>Proficient understanding of RESTful APIs.</li>
+          </ul>
+        </div>
+        <div id="profile">
+          <h3>Candidate Profile</h3>
+          <ul>
+            <li>
+              Graduate or Post Graduate in Computer Science from a premier
+              institute
+            </li>
+            <li>
+              Deep expertise in software development, dev ops, frontend and
+              back-end development.
+            </li>
+            <li>
+              Minimum 5 years of experience in core PHP coding and My SQL.
+            </li>
+            <li>Exposure to mobile application development preferred.</li>
+            <li>
+              Continuously discover, evaluate, and implement new technologies
+              and frameworks to maximise development efficiency.
+            </li>
+          </ul>
+        </div>
+        <button id="submit_btn">Apply Job</button>
+      </div>
+      <!-- Form Section Starts Here -->
+
+      <h1 style="text-align: left;margin-bottom: 20px;">Career Form</h1>
+      <div id="career-area">
+        <div id="form-area">
+          <form enctype="multipart/form-data">
+            <label for="fullname">FULL NAME</label>
+            <input type="text" id="fullname" /><br />
+            <label for="position">POSITION</label>
+            <input type="text" id="position" /><br />
+            <label for="experience">EXPERIENCE (years)/FRESHER</label>
+            <select id="experience">
+              <option value="Fresher" selected>Fresher</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <label for="location">LOCATION</label>
+            <input type="text" id="location" /><br />
+            <label for="firstName">EMAIL</label>
+            <input type="email" id="firstName" /><br />
+            <label for="resume">RESUME</label>
+            <input type="file" id="resume" /><br />
+          </form>
+          <button id="submit_btn" style="margin-left: 0px; margin-top: 15px;">Submit</button>
+        </div>
+      </div>
+      <!-- Form Section ends Here -->
+    </div>
+  </body>
+</html>
