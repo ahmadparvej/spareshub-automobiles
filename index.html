@@ -14,17 +14,19 @@
   <link rel="stylesheet" href="./css/brand.css">
   <link rel="stylesheet" href="./css/enquiry.css">
   <link rel="stylesheet" href="./css/footer.css">
-
+ 
 </head>
 
 <body>
+
   <div id="cart">
     <button id="cart-checkOut">Check Out</button>
     <button id="close-cart">X</button>
     <p id="cart-totalPrice">0</p>
     <div id="cartItems"></div>
   </div>
-
+  <!-- Start of the Header Section -->
+  
   <div class="colors">
     <p id="userName">
 
@@ -114,6 +116,11 @@
 
   </div>
 
+  <!-- End of the Header Section  -->
+
+
+
+  <!-- Slider Section start here -->
   <section>
     <div id="slider">
       <div id="inner-box">
@@ -135,7 +142,7 @@
       </div>
     </div>
   </section>
-
+  
   <section id="brands">
     <div id="container">
       <h2 style="height: 34px;"><strong>BROWSE BY BRANDS</strong></h2>
@@ -158,6 +165,23 @@
         <div><a href="https://spareshub.com/honda/"> <img class="brandimglogo"
               src="https://spareshub.com/pub/media/wysiwyg/xhonda_2.png.pagespeed.ic.RqKvPjjWvt.webp"> </a></div>
 
+        <div><a href="https://spareshub.com/maruti-suzuki/"> <img class="brandimglogo"
+              src="https://spareshub.com/pub/media/wysiwyg/xmarutisuzuki_1.png.pagespeed.ic.9zcpkCRaUE.webp"> </a></div>
+
+        <div><a href="https://spareshub.com/hundai/"> <img class="brandimglogo"
+              src="https://spareshub.com/pub/media/wysiwyg/xhundai_1.png.pagespeed.ic.BdhzVhklJm.webp"> </a></div>
+
+        <div><a href="https://spareshub.com/mahindra/"> <img class="brandimglogo"
+              src="https://spareshub.com/pub/media/wysiwyg/xmahindra_1.png.pagespeed.ic.H0Q9fj69-h.webp"> </a></div>
+
+        <div><a href="https://spareshub.com/tata/"> <img class="brandimglogo"
+              src="https://spareshub.com/pub/media/wysiwyg/xtata_2.png.pagespeed.ic.nCbNq88VZS.webp"> </a></div>
+
+        <div><a href="https://spareshub.com/toyota/"> <img class="brandimglogo"
+              src="https://spareshub.com/pub/media/wysiwyg/xtoyota_1.png.pagespeed.ic.IxoTAzW7q5.webp"> </a></div>
+
+        <div><a href="https://spareshub.com/honda/"> <img class="brandimglogo"
+              src="https://spareshub.com/pub/media/wysiwyg/xhonda_2.png.pagespeed.ic.RqKvPjjWvt.webp"> </a></div>
 
         <div><a href="https://spareshub.com/renault/"> <img class="brandimglogo"
               src="https://spareshub.com/pub/media/wysiwyg/xrenault_1.png.pagespeed.ic.5-rdnKPUGj.webp"> </a></div>
@@ -202,19 +226,10 @@
     <h2>PRODUCT_LIST</h2>
     <div id="products"></div>
   </section>
+
   <section id="testimonials">
     <h2>TESTIMONIALS</h2>
     <div id="testimonials-container">
-      <div class="testimonial-people">
-        <div class="image">
-          <img src="https://spareshub.com/pub/media/wysiwyg/xtest1.jpg.pagespeed.ic.T3x9fg9RM3.webp" alt="Meenakshi">
-        </div>
-        <div class="name">
-          <h3>Meenakshi Shinde</h3>
-          <p>I purchased a clutch set for my Volkswagen Vento from your website. I was happy with the parts and the
-            service. Thanks SparesHub. </p>
-        </div>
-      </div>
       <div class="testimonial-people">
         <div class="image">
           <img src="https://spareshub.com/pub/media/wysiwyg/xtest2.jpg.pagespeed.ic.vNI_ICt75i.webp" alt="Rohan">
@@ -237,6 +252,7 @@
       </div>
     </div>
   </section>
+
   <div class="callbtn" style="display: none;">
     <img
       src="data:image/webp;base64,UklGRrgBAABXRUJQVlA4TKwBAAAvL8ALAGfjoG0kSYprtPxxLMrnjoSDtpEkOZqk59ndo3UG0rZJ71/ivWz+1bZtw4zuyRv3/ycgieREwOMgP1+SREBOJEnADxVMYoKJFMSEJCBRttiOsqEJKBhNxJA5G2YLE2GFKMQkJ2Jgcs491++QrSiazAalOCf/IxPlnCQE2WUrTCKUbZj/DyLyuyRJFJAA0m1rx5tYb98v/G5t221S27YdP/9//DnrfWadRfQ/8e+WYUMDZ3Ds/HQ4Ab7Q4i8ZL70SXKGlClnHMR082tAX2bX5MHjCu+S8Rw4c2fZncpZGBTjEaIlck3FwRGfIdduWBUd0hpzXfUmwxCfqZB9Cgkfreyfrpz8OLnFJ1vegBq5wnqz6sh9cmY5Xsl46k+AKrpO9H9bBlG15IKu+4oNDhA0NapHxElmlBZ8OQxdTOxv9UagFN8ku5kMy4yuUyXib8+lQyTUdkWNvoHmtSlaxENWhksIFOT6eyLUloCS7bqlRZURASXZcUqPZCNRk6xF5P/akoaiJ1U/yuOuTUNYDQwd/5KiddAtwyOjw9tmNcbU3rRlgkmFHXMc/Gw==">
@@ -310,7 +326,6 @@
 <script src="./js/productData.js"></script>
 <script src="./js/enquiry.js"></script>
 
-
 <script>
   var name = JSON.parse(localStorage.getItem("name"))
   console.log(typeof (name))
@@ -320,3 +335,5 @@
     document.querySelector("#userName").innerText = "Welcome " + name
   }
 </script>
+
+
