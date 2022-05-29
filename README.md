@@ -10,14 +10,12 @@ What is spareshub.com?
 
 A website that helps customers buy genuine spare parts of most of the cars in India. We have eased the searching process in which customers have less headache in getting spare parts for their cars and getting them delivered to the doorsteps.
 
-Our team built this website on basic tools,
+Our team built this website on using following languages,
 
 Html
 CSS
 JavaScript
 Main website link: https://spareshub.com/
-
-GitHub repository link: https://github.com/ahmadparvej/spareshub-automobiles.git
 
 Below are some of the attached pictures of the website.
 
@@ -28,9 +26,14 @@ Index Page →
 ![index](https://user-images.githubusercontent.com/79194669/170877167-668dee89-a0cf-49e2-8f9f-b77b2a12e5f3.png)
 
 
+
+
 Login Page →
 
 ![login](https://user-images.githubusercontent.com/79194669/170877179-a02dc1dd-aeca-4f3f-b5b3-128b5defe195.png)
+
+
+
 
 Franchise Page →
 
