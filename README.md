@@ -1,10 +1,10 @@
 Spareshub.com Clone Project
 In this blog post, I’m going to talk about sparehub.com clone, a website that we built up for our Unit-2 construct week submission. Website development is fun when all the team members collaborate and make a good website. Let me introduce you to my team-mates (in no particular order)
 
-Parvej Ahmed
-Harsh Vardhan Singh
-Gyan Prakash Mishra
-Ajit Singh
+Parvej Ahmed,
+Harsh Vardhan Singh,
+Gyan Prakash Mishra,
+Ajit Singh,
 Myself :D
 What is spareshub.com?
 
